@@ -166,7 +166,7 @@ graph LR
 
 ---
 
-## <img src="https://user-images.githubusercontent.com/74038190/212281775-b468df30-4edc-4bf8-a4ee-f52f1aaddc86.gif" width="25"> API Endpoints
+## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width="25"> API Endpoints
 
 | Method | Endpoint | Description |
 |:------:|----------|-------------|
