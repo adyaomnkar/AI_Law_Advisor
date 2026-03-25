@@ -134,7 +134,7 @@ npm start
 
 ---
 
-## <img src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif" width="25"> How It Works
+## <img src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif" width="40"> How It Works
 
 ```mermaid
 graph LR
