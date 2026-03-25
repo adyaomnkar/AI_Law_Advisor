@@ -1,6 +1,5 @@
 import re
 
-# load spaCy model once at import time
 try:
     import spacy
     nlp = spacy.load('en_core_web_sm')
@@ -11,7 +10,6 @@ except (ImportError, OSError):
 
 
 def _regex_extract(text):
-    """domain-specific regex patterns for Indian legal entities"""
     entities = {}
 
     # Section numbers
@@ -59,22 +57,15 @@ def _regex_extract(text):
 
 
 def extract_entities(text):
-    """regex-only extraction (fallback)"""
     return _regex_extract(text)
 
 
 def extract_entities_spacy(text):
-    """hybrid NER: spaCy NLP pipeline + domain-specific regex patterns.
-    spaCy handles PERSON, MONEY, ORG detection while regex catches
-    Indian legal entities like specific Acts and Section numbers."""
-
-    # start with domain-specific regex
     entities = _regex_extract(text)
 
     if not SPACY_AVAILABLE or not nlp:
         return entities
 
-    # run spaCy NLP pipeline
     doc = nlp(text)
 
     for ent in doc.ents:

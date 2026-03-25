@@ -2,44 +2,52 @@ import os
 import json
 from datetime import datetime
 
-# PostgreSQL config from env
 PG_HOST = os.getenv('PG_HOST', 'localhost')
 PG_PORT = os.getenv('PG_PORT', '5432')
 PG_DB = os.getenv('PG_DB', 'law_advisor')
 PG_USER = os.getenv('PG_USER', 'postgres')
 PG_PASS = os.getenv('PG_PASS', 'postgres')
 
-# try PostgreSQL first, fallback to SQLite for local dev
 try:
     import psycopg2
     import psycopg2.extras
-    USE_PG = True
+    _HAS_PG_DRIVER = True
 except ImportError:
-    USE_PG = False
+    _HAS_PG_DRIVER = False
 
+_pg_failed = False
 SQLITE_PATH = os.path.join(os.path.dirname(__file__), '..', 'law_advisor.db')
 
 
+def _using_pg():
+    return _HAS_PG_DRIVER and not _pg_failed
+
+
 def get_conn():
-    if USE_PG:
-        conn = psycopg2.connect(
-            host=PG_HOST, port=PG_PORT,
-            dbname=PG_DB, user=PG_USER, password=PG_PASS
-        )
-        conn.autocommit = True
-        return conn
-    else:
-        import sqlite3
-        conn = sqlite3.connect(SQLITE_PATH)
-        conn.row_factory = sqlite3.Row
-        return conn
+    global _pg_failed
+    if _HAS_PG_DRIVER and not _pg_failed:
+        try:
+            conn = psycopg2.connect(
+                host=PG_HOST, port=PG_PORT,
+                dbname=PG_DB, user=PG_USER, password=PG_PASS
+            )
+            conn.autocommit = True
+            return conn
+        except Exception:
+            _pg_failed = True
+            print("[DB] PostgreSQL connection failed, falling back to SQLite")
+
+    import sqlite3
+    conn = sqlite3.connect(SQLITE_PATH)
+    conn.row_factory = sqlite3.Row
+    return conn
 
 
 def init_db():
     conn = get_conn()
     c = conn.cursor()
 
-    if USE_PG:
+    if _using_pg():
         c.execute('''CREATE TABLE IF NOT EXISTS users (
             user_id SERIAL PRIMARY KEY,
             name TEXT,
@@ -87,12 +95,10 @@ def init_db():
             file_path TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )''')
-
-    if not USE_PG:
         conn.commit()
+
     conn.close()
-    db_type = "PostgreSQL" if USE_PG else "SQLite"
-    print(f"[DB] Using {db_type}")
+    print(f"[DB] Using {'PostgreSQL' if _using_pg() else 'SQLite'}")
 
 
 def save_session(query, response, domain='tenant', language='en', entities=None, user_id=None):
@@ -100,7 +106,7 @@ def save_session(query, response, domain='tenant', language='en', entities=None,
     c = conn.cursor()
     entities_val = json.dumps(entities) if entities else None
 
-    if USE_PG:
+    if _using_pg():
         c.execute(
             'INSERT INTO sessions (user_id, query, response, domain, language, entities) VALUES (%s, %s, %s, %s, %s, %s) RETURNING session_id',
             (user_id, query, response, domain, language, entities_val)
@@ -111,8 +117,7 @@ def save_session(query, response, domain='tenant', language='en', entities=None,
             'INSERT INTO sessions (user_id, query, response, domain, language, entities) VALUES (?, ?, ?, ?, ?, ?)',
             (user_id, query, response, domain, language, entities_val)
         )
-        if not USE_PG:
-            conn.commit()
+        conn.commit()
         session_id = c.lastrowid
 
     conn.close()
@@ -123,7 +128,7 @@ def save_document(user_id, document_type, file_path):
     conn = get_conn()
     c = conn.cursor()
 
-    if USE_PG:
+    if _using_pg():
         c.execute(
             'INSERT INTO generated_documents (user_id, document_type, file_path) VALUES (%s, %s, %s) RETURNING doc_id',
             (user_id, document_type, file_path)
@@ -143,16 +148,14 @@ def save_document(user_id, document_type, file_path):
 
 def get_sessions(limit=50):
     conn = get_conn()
-    c = conn.cursor()
 
-    if USE_PG:
+    if _using_pg():
         c = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         c.execute('SELECT * FROM sessions ORDER BY created_at DESC LIMIT %s', (limit,))
-        rows = c.fetchall()
-        conn.close()
-        return [dict(r) for r in rows]
     else:
+        c = conn.cursor()
         c.execute('SELECT * FROM sessions ORDER BY created_at DESC LIMIT ?', (limit,))
-        rows = c.fetchall()
-        conn.close()
-        return [dict(r) for r in rows]
+
+    rows = c.fetchall()
+    conn.close()
+    return [dict(r) for r in rows]
