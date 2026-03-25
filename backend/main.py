@@ -12,7 +12,7 @@ import json
 from config import PORT, FRONTEND_URL, get_llm_provider
 from database.db import init_db, save_session, get_sessions
 from rag_pipeline.hybrid_search import HybridSearch
-from ner.legal_ner import extract_entities
+from ner.legal_ner import extract_entities_spacy as extract_entities
 from llm_service import generate_response
 from pdf_generator import generate_legal_notice
 
