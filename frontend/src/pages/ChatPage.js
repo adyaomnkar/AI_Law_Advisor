@@ -21,7 +21,7 @@ export default function ChatPage() {
     try {
       const { sendQuery } = await import('../services/api');
       const res = await sendQuery(question, domain, 'en', null);
-      addMessage('assistant', res.response, res.entities, res.sources);
+      addMessage('assistant', res.response, res.entities, res.sources, res.accuracy, res.action_buttons);
     } catch {
       const { getMockResponse } = await import('../components/ChatInput');
       const mock = getMockResponse(question, domain);

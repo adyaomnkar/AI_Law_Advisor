@@ -1,0 +1,163 @@
+Section 43
+IT Act - Penalty for Damage to Computer Systems
+If any person without permission accesses or secures access to a computer system or computer network, or downloads, copies, or extracts any data, or introduces or causes virus, or denies or causes denial of access to any authorised person, he shall be liable to pay damages by way of compensation to the affected person. Penalty: Up to 1 crore rupees.
+
+Section 43A
+IT Act - Compensation for Failure to Protect Data
+Where a body corporate possessing, dealing, or handling any sensitive personal data is negligent in implementing and maintaining reasonable security practices leading to wrongful loss or wrongful gain to any person, such body corporate shall be liable to pay damages by way of compensation.
+
+Section 44
+IT Act - Penalty for Failure to Furnish Information
+If any person fails to furnish any document, return or report to the Controller or the Certifying Authority, or fails to maintain books of account or records, he shall be liable to a penalty not exceeding one lakh and fifty thousand rupees for each such failure.
+
+Section 45
+IT Act - Residual Penalty
+Whoever contravenes any rules or regulations made under this Act shall be liable to pay a penalty not exceeding twenty-five thousand rupees.
+
+Section 65
+IT Act - Tampering with Computer Source Documents
+Whoever knowingly or intentionally conceals, destroys, or alters or causes another to conceal, destroy or alter any computer source code used for a computer, computer programme, computer system, or computer network, when the computer source code is required to be kept or maintained by law, shall be punishable with imprisonment up to three years, or with fine up to two lakh rupees, or with both.
+
+Section 66
+IT Act - Computer Related Offences
+If any person, dishonestly or fraudulently, does any act referred to in Section 43, he shall be punishable with imprisonment for a term which may extend to three years or with fine which may extend to five lakh rupees or with both. Includes unauthorized access, hacking, data theft, introducing malware.
+
+Section 66A
+IT Act - Punishment for Sending Offensive Messages
+Any person who sends by means of a computer resource any information that is grossly offensive or of menacing character, or any information which he knows to be false to cause annoyance, insult, injury, criminal intimidation, enmity or hatred, shall be punishable with imprisonment up to three years and fine. (Note: struck down as unconstitutional in Shreya Singhal case but provisions survive under BNS Section 353).
+
+Section 66B
+IT Act - Punishment for Dishonestly Receiving Stolen Computer Resource
+Whoever dishonestly receives or retains any stolen computer resource or communication device, knowing or having reason to believe the same to be stolen, shall be punished with imprisonment up to three years or fine up to one lakh rupees or both.
+
+Section 66C
+IT Act - Punishment for Identity Theft
+Whoever, fraudulently or dishonestly makes use of the electronic signature, password or any other unique identification feature of any other person, shall be punished with imprisonment up to three years and shall also be liable to fine which may extend to one lakh rupees. Covers SIM swap fraud, account takeover, Aadhaar misuse.
+
+Section 66D
+IT Act - Punishment for Cheating by Personation
+Whoever, by means of any communication device or computer resource cheats by personating, shall be punished with imprisonment up to three years and shall also be liable to fine which may extend to one lakh rupees. Covers fake profiles, social media impersonation, KYC fraud.
+
+Section 66E
+IT Act - Punishment for Violation of Privacy
+Whoever intentionally or knowingly captures, publishes or transmits the image of a private area of any person without his or her consent shall be punished with imprisonment up to three years or with fine not exceeding two lakh rupees, or with both. Covers voyeurism, upskirting, hidden camera offences.
+
+Section 66F
+IT Act - Punishment for Cyber Terrorism
+Whoever commits or conspires to commit cyber terrorism shall be punished with imprisonment which may extend to imprisonment for life. Cyber terrorism means access to computer systems to cause damage or threaten unity, integrity, sovereignty of India, or strike terror.
+
+Section 67
+IT Act - Punishment for Publishing Obscene Material in Electronic Form
+Whoever publishes or transmits or causes to be published or transmitted in electronic form, any material which is lascivious or appeals to the prurient interest or if its effect is to deprave and corrupt persons, shall be punished with imprisonment up to three years and fine up to five lakh rupees on first conviction.
+
+Section 67A
+IT Act - Punishment for Publishing Sexually Explicit Material
+Whoever publishes or transmits or causes to be published or transmitted material containing sexually explicit act or conduct, shall be punished on first conviction with imprisonment which may extend to five years and with fine which may extend to ten lakh rupees.
+
+Section 67B
+IT Act - Punishment for Publishing Child Pornography
+Whoever publishes or transmits or causes to be published or transmitted material in electronic form which depicts children engaged in sexually explicit act, shall be punished on first conviction with imprisonment which may extend to five years and fine up to ten lakh rupees.
+
+Section 67C
+IT Act - Preservation and Retention of Information
+Intermediaries shall preserve and retain information as may be specified for such duration and in such manner as the Central Government may prescribe. Non-compliance leads to penalty.
+
+Section 69
+IT Act - Power to Issue Directions for Interception or Monitoring
+The Central Government may, for reasons of national security, sovereignty, integrity of India, friendly relations, public order, prevention of incitement to offences, issue directions for interception, monitoring, or decryption of any information through any computer resource.
+
+Section 69A
+IT Act - Power to Issue Directions for Blocking Public Access
+Where the Central Government is satisfied that it is necessary to block access to any information generated, transmitted, received, stored, or hosted in any computer resource, it may issue direction for blocking such information.
+
+Section 69B
+IT Act - Power to Authorise Monitoring and Collecting Traffic Data
+The Central Government may authorise any agency to monitor and collect traffic data or information through any computer resource for purposes of cybersecurity.
+
+Section 70
+IT Act - Protected System
+The appropriate Government may declare any computer resource which directly or indirectly affects critical information infrastructure as a protected system. Unauthorised access to protected systems: imprisonment up to ten years and fine.
+
+Section 72
+IT Act - Breach of Confidentiality and Privacy
+Save as otherwise provided in this Act or any other law, any person who, in pursuance of any of the powers conferred under this Act, has secured access to any electronic record, book, register, correspondence, information, document or other material without the consent of the person concerned, discloses such material to any other person, shall be punished with imprisonment up to two years or fine up to one lakh rupees.
+
+Section 72A
+IT Act - Punishment for Disclosure of Information in Breach of Lawful Contract
+Any person who, while providing services under the terms of lawful contract, has secured access to any material containing personal information about another person, with the intent to cause wrongful loss or gain discloses, without the consent of the person concerned, shall be punished with imprisonment up to three years or fine up to five lakh rupees.
+
+Section 74
+IT Act - Publication for Fraudulent Purpose
+Whoever knowingly creates, publishes or otherwise makes available a Digital Signature Certificate for any fraudulent or unlawful purpose shall be punished with imprisonment up to two years, or fine up to one lakh rupees, or with both.
+
+Section 1930
+Cyber Crime Helpline
+National Cyber Crime Reporting Portal helpline number 1930 is a dedicated helpline for reporting financial fraud and cyber crimes. Citizens should call 1930 immediately when they lose money through online fraud, UPI fraud, banking fraud, or any financial cybercrime. The portal is cybercrime.gov.in.
+
+Section 2
+NCIIPC - National Critical Information Infrastructure Protection Centre
+NCIIPC is designated under Section 70A of the IT Act to protect critical information infrastructure of India. Covers banking, finance, telecom, energy, transportation, and government sectors.
+
+Section 3
+TAFCOP - Telecom Analytics for Fraud Management
+Department of Telecommunications operates TAFCOP portal at tafcop.sanchaarsaathi.gov.in. Citizens can check how many mobile connections are registered on their Aadhaar/identity documents and report unauthorized SIM cards. Relevant law: IT Act Section 66C (identity theft), Telecom Regulatory Authority guidelines.
+
+Section 4
+SIM Swap and KYC Fraud
+SIM swap fraud occurs when a fraudster using stolen personal data obtains a duplicate SIM on the victim's number. This enables OTP-based banking fraud. Under IT Act Section 66C (identity theft) and Section 66D (cheating by personation), this is punishable with imprisonment up to 3 years. Relevant laws: BNS Section 304 (cheating), IT Act 66C.
+
+Section 5
+UPI and Digital Payment Fraud
+Online financial fraud using UPI, net banking, credit/debit cards is covered under IT Act Section 66C and 66D, BNS Section 308 (cheating and dishonestly inducing delivery of property). Victims should call 1930 immediately, report at cybercrime.gov.in, and alert their bank to freeze the account.
+
+Section 6
+Phishing and Vishing Attacks
+Phishing involves fraudulent emails/messages impersonating legitimate entities to steal credentials. Vishing involves fraudulent phone calls. Both are punishable under IT Act Section 66D (cheating by personation), BNS Section 304 (cheating). Victims should report at cybercrime.gov.in.
+
+Section 7
+Non-Consensual Intimate Images (NCII)
+Sharing intimate or sexual images without consent is punishable under IT Act Section 67 (obscene content), Section 66E (privacy violation), and BNS Section 77 (voyeurism), Section 308. Victims above 18 can request removal via stopncii.org. Victims below 18 should use takeitdown.ncmec.org for CSAM removal.
+
+Section 8
+Cyberbullying and Online Harassment
+Cyberbullying, online trolling, digital harassment are punishable under IT Act Section 67 and BNS Section 351 (criminal intimidation), Section 75 (sexual harassment), Section 76 (voyeurism). Victims should report to cybercrime.gov.in and also to the respective social media platform.
+
+Section 9
+Ransomware and Malware Attacks
+Deploying ransomware, trojan, or any malware is punishable under IT Act Sections 43, 66, 66F. Victims should not pay ransom, preserve evidence, report to CERT-In (cert-in.org.in) and cybercrime.gov.in.
+
+Section 10
+Dark Web and Cryptocurrency Crimes
+Buying or selling illegal goods/services on dark web, money laundering through cryptocurrency is an offence under IT Act Section 66F, Prevention of Money Laundering Act 2002, and Narcotic Drugs and Psychotropic Substances Act. Report to cybercrime.gov.in and ED (Enforcement Directorate).
+
+Section 11
+Social Media Fraud and Fake Accounts
+Creating fake social media profiles, impersonation, spreading misinformation is punishable under IT Act Section 66D, BNS Section 318 (forgery), Section 196 (promoting enmity). Report fake accounts to the platform and to cybercrime.gov.in.
+
+Section 12
+Online Job and Investment Fraud
+Fake job offers, pig butchering scams, Ponzi schemes, and investment fraud are punishable under BNS Section 308 (cheating), Section 304, IT Act 66D. Call 1930 and report at cybercrime.gov.in.
+
+Section 13
+Email and Business Email Compromise (BEC)
+Business email compromise involves fraudsters impersonating senior executives or vendors to redirect payments. Punishable under IT Act Section 66, 66C, 66D and BNS Section 316 (criminal breach of trust). Report to cybercrime.gov.in.
+
+Section 14
+Aadhaar and Identity Document Misuse
+Unauthorized use of Aadhaar data is punishable under Aadhaar (Targeted Delivery of Financial and Other Subsidies, Benefits and Services) Act, 2016 Section 37-40, and IT Act 66C. Victims should lock their Aadhaar biometrics at myaadhaar.uidai.gov.in and report misuse to UIDAI helpline 1947.
+
+Section 15
+Online Child Sexual Exploitation (CSAM)
+Child sexual abuse material (CSAM) online is one of the most serious crimes under IT Act Section 67B (minimum 5 years imprisonment), POCSO Act Section 14-15. Report CSAM to NCMEC (cybertipline.org) and to NCPCR. Minor victims should use takeitdown.ncmec.org to remove images.
+
+Section 16
+Cyber Stalking and Threats
+Cyber stalking — following, monitoring, threatening a person online — is punishable under IT Act Section 67, BNS Section 77 (stalking), Section 351 (criminal intimidation). Collect screenshots as evidence. Report to police and cybercrime.gov.in.
+
+Section 17
+OTP Fraud and Remote Access Scams
+Fraudsters calling as bank officials to obtain OTP or gain remote access to devices (via TeamViewer, AnyDesk) to commit fraud: punishable under IT Act 66C, 66D and BNS 304, 308. Call 1930 immediately to freeze fraudulent transactions.
+
+Section 18
+Revenge Porn and Sextortion
+Sharing intimate images of a person without consent to blackmail (sextortion) is punishable under IT Act Section 67, 67A, 66E, and BNS Sections 77, 351. Victims above 18 should use stopncii.org to hash and block images. Report to cybercrime.gov.in. NCW helpline for women: 181.

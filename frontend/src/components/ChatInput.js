@@ -30,7 +30,7 @@ export default function ChatInput() {
 
     try {
       const res = await sendQuery(query, domain, language, sessionId);
-      addMessage('assistant', res.response, res.entities, res.sources);
+      addMessage('assistant', res.response, res.entities, res.sources, res.accuracy, res.action_buttons);
     } catch (err) {
       // fallback when backend is down
       const mockResponse = getMockResponse(query, domain);

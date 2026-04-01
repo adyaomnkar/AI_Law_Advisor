@@ -10,13 +10,15 @@ export function ChatProvider({ children }) {
   const [isLoading, setIsLoading] = useState(false);
   const [extractedEntities, setExtractedEntities] = useState(null);
 
-  const addMessage = useCallback((role, content, entities = null, sources = null) => {
+  const addMessage = useCallback((role, content, entities = null, sources = null, accuracy = null, action_buttons = null) => {
     setMessages(prev => [...prev, {
       id: Date.now(),
       role,
       content,
       entities,
       sources,
+      accuracy,
+      action_buttons,
       timestamp: new Date(),
     }]);
     if (entities) setExtractedEntities(entities);

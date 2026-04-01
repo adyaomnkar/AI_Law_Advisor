@@ -15,12 +15,18 @@ from rag_pipeline.hybrid_search import HybridSearch
 from ner.legal_ner import extract_entities_spacy as extract_entities
 from llm_service import generate_response
 from pdf_generator import generate_legal_notice
+from action_engine import get_action_buttons
 
 app = FastAPI(title="AI Law Advisor API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[FRONTEND_URL, "http://localhost:3000", "http://localhost:5173"],
+    allow_origins=[
+        FRONTEND_URL,
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "https://ai-law-advisor.onrender.com",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -54,6 +60,8 @@ class ChatResponse(BaseModel):
     entities: dict
     sources: list
     session_id: Optional[str] = None
+    accuracy: list = []
+    action_buttons: list = []
 
 class SearchRequest(BaseModel):
     query: str
@@ -83,6 +91,10 @@ def root():
         "docs_loaded": len(search_engine.documents) if search_engine else 0,
     }
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 
 
 
@@ -91,8 +103,8 @@ async def chat(req: ChatRequest):
     if not search_engine:
         raise HTTPException(500, "Search engine not initialized")
 
-    # search for relevant legal context
-    results = search_engine.search(req.query, domain=req.domain, top_k=5)
+    # search for relevant legal context with relevance scores
+    results = search_engine.search_with_scores(req.query, domain=req.domain, top_k=5)
 
     # extract entities from query + results
     combined_text = req.query + "\n" + "\n".join([r['text'] for r in results[:3]])
@@ -112,6 +124,13 @@ async def chat(req: ChatRequest):
 
     sources = [{'section': r['section'], 'text': r.get('title', r['source'])} for r in results[:5]]
 
+    accuracy = [
+        {'section': r['section'], 'title': r.get('title', r['source']), 'relevance': r.get('relevance', 0)}
+        for r in results[:5]
+    ]
+
+    action_buttons = get_action_buttons(req.query, entities, response_text)
+
     save_session(req.query, response_text, req.domain, req.language, entities)
 
     return ChatResponse(
@@ -119,6 +138,8 @@ async def chat(req: ChatRequest):
         entities=entities,
         sources=sources,
         session_id=req.session_id,
+        accuracy=accuracy,
+        action_buttons=action_buttons,
     )
 
 

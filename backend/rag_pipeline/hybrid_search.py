@@ -26,20 +26,26 @@ class HybridSearch:
             'tenant_rights.txt': 'tenant',
             'consumer_protection.txt': 'consumer',
             'general_laws.txt': 'general',
+            'bns_laws.txt': 'criminal',
+            'cyber_crimes.txt': 'cyber',
+            'women_child_crimes.txt': 'women_child',
+            'law_enforcement.txt': 'enforcement',
         }
+        global_idx = 0
         for filename, domain in domain_map.items():
             filepath = os.path.join(DATA_DIR, filename)
             if not os.path.exists(filepath):
                 continue
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
-            chunks = self._split_into_sections(content, domain)
+            chunks = self._split_into_sections(content, domain, global_idx)
+            global_idx += len(chunks)
             self.documents.extend(chunks)
 
-    def _split_into_sections(self, text, domain):
+    def _split_into_sections(self, text, domain, start_idx=0):
         sections = re.split(r'\n(?=Section \d+)', text.strip())
         chunks = []
-        for section in sections:
+        for i, section in enumerate(sections):
             if not section.strip():
                 continue
             lines = section.strip().split('\n')
@@ -47,7 +53,7 @@ class HybridSearch:
             title = lines[1].strip() if len(lines) > 1 else ''
             body = '\n'.join(lines[2:]).strip() if len(lines) > 2 else ''
             chunks.append({
-                'id': f"{domain}_{section_id.replace(' ', '_').lower()}",
+                'id': f"doc_{start_idx + i}_{domain}",
                 'source': f"{section_id} - {title}",
                 'section': section_id,
                 'title': title,
@@ -84,16 +90,23 @@ class HybridSearch:
         fused = self._reciprocal_rank_fusion(bm25_results, vector_results, k=60)
         return fused[:top_k]
 
+    def search_with_scores(self, query, domain=None, top_k=5):
+        bm25_results = self._bm25_search(query, domain, top_k * 2)
+        vector_results = self._vector_search(query, domain, top_k * 2) if self.collection else []
+        scored = self._reciprocal_rank_fusion_scored(bm25_results, vector_results, k=60)
+        return scored[:top_k]
+
     def _bm25_search(self, query, domain, top_k):
         if not self.bm25:
             return []
         tokenized_query = query.lower().split()
         scores = self.bm25.get_scores(tokenized_query)
 
+        cross_domain = {'general', 'criminal', 'cyber', 'women_child', 'enforcement'}
         scored_docs = []
         for i, score in enumerate(scores):
             doc = self.documents[i]
-            if domain and doc['domain'] != domain and doc['domain'] != 'general':
+            if domain and doc['domain'] != domain and doc['domain'] not in cross_domain:
                 continue
             scored_docs.append((doc, score))
 
@@ -105,7 +118,11 @@ class HybridSearch:
             return []
         where_filter = None
         if domain:
-            where_filter = {"$or": [{"domain": domain}, {"domain": "general"}]}
+            where_filter = {"$or": [
+                {"domain": domain}, {"domain": "general"},
+                {"domain": "criminal"}, {"domain": "cyber"},
+                {"domain": "women_child"}, {"domain": "enforcement"},
+            ]}
 
         results = self.collection.query(
             query_texts=[query],
@@ -142,3 +159,29 @@ class HybridSearch:
 
         sorted_ids = sorted(scores.keys(), key=lambda x: scores[x], reverse=True)
         return [doc_map[doc_id] for doc_id in sorted_ids]
+
+    def _reciprocal_rank_fusion_scored(self, bm25_results, vector_results, k=60):
+        scores = {}
+        doc_map = {}
+
+        for rank, doc in enumerate(bm25_results):
+            doc_id = doc.get('id', doc['source'])
+            scores[doc_id] = scores.get(doc_id, 0) + 1 / (k + rank + 1)
+            doc_map[doc_id] = doc
+
+        for rank, doc in enumerate(vector_results):
+            doc_id = doc.get('id', doc['source'])
+            scores[doc_id] = scores.get(doc_id, 0) + 1 / (k + rank + 1)
+            doc_map[doc_id] = doc
+
+        sorted_ids = sorted(scores.keys(), key=lambda x: scores[x], reverse=True)
+        if not sorted_ids:
+            return []
+
+        max_score = scores[sorted_ids[0]]
+        results = []
+        for doc_id in sorted_ids:
+            doc = doc_map[doc_id].copy()
+            doc['relevance'] = round((scores[doc_id] / max_score) * 100, 1) if max_score > 0 else 0
+            results.append(doc)
+        return results

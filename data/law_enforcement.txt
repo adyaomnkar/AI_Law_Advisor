@@ -1,0 +1,127 @@
+Section 1
+BNSS - Bharatiya Nagarik Suraksha Sanhita Overview
+The Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) replaces the Code of Criminal Procedure (CrPC), 1973 and came into force on 1st July 2024. It governs the procedure for investigation, trial, sentencing and execution of sentence for criminal offences in India.
+
+Section 2
+BNSS - Zero FIR Provision
+Under BNSS, a Zero FIR can be registered at any police station irrespective of jurisdiction. The police station must register the FIR and later transfer it to the appropriate jurisdiction. Refusal to register FIR is an offence by the police officer.
+
+Section 35
+BNSS - Arrest Procedure
+Police officer may arrest without warrant a person who has committed a cognizable offence, who has been concerned in any cognizable offence or against whom a credible complaint has been made, or who is suspected of committing a cognizable offence. Person arrested must be informed of grounds.
+
+Section 36
+BNSS - Arrest of Women
+No woman shall be arrested after sunset and before sunrise, and where such exceptional circumstances exist, the woman police officer shall, by making a written report, obtain the prior permission of the Judicial Magistrate of the first class having jurisdiction.
+
+Section 37
+BNSS - Rights of Arrested Person
+An arrested person has right to meet an advocate of his choice during interrogation. Person arrested must be produced before Magistrate within 24 hours. Person has right to inform a friend, relative or nominated person about arrest and place of detention.
+
+Section 43
+BNSS - FIR Registration (Section 173 CrPC equivalent)
+Every information relating to the commission of a cognizable offence, if given orally to an officer in charge of a police station, shall be reduced to writing by him and be read over to the informant. It shall be signed by the informant, and the substance thereof shall be entered in a book maintained by such officer.
+
+Section 105
+BNSS - Summons
+Every summons issued by a Court shall be in writing, in duplicate, signed by the presiding officer, and shall bear the seal of the Court. Service of summons to be served by police officer, or an officer of Court, or any other public servant.
+
+Section 107
+BNSS - Service of Summons on Corporate Bodies
+Service of summons on a corporation may be effected by serving it on the secretary, local manager, or other principal officer of the corporation, or by letter sent by registered post, addressed to the chief officer of the corporation in India.
+
+Section 173
+BNSS - Timeline for Investigation
+Police must complete investigation and file charge sheet (challan) within a stipulated time: For offences punishable with imprisonment up to 7 years: 60 days. For offences punishable with more than 7 years: 90 days. Extension requires Magistrate's permission.
+
+Section 176
+BNSS - Investigation of Cognizable Offences
+Any officer in charge of a police station may, without the order of a Magistrate, investigate any cognizable case. Investigation must include examination of witnesses, collection of evidence, forensic examination, and filing of charge sheet.
+
+Section 179
+BNSS - Use of Technology in Investigations
+Police may use technology including audio-video electronic means to record the statement of a witness or accused in lieu of their presence. Forensic experts must be mandatorily called for investigation of offences punishable with 7 or more years.
+
+Section 182
+BNSS - Statements to Police
+No statement made by any person to a police officer in the course of an investigation shall, if reduced into writing, be signed by the person making it. Such statements can be used to contradict the witness during trial.
+
+Section 187
+BNSS - Procedure When Investigation Cannot Be Completed in 24 Hours
+Whenever any person is arrested and detained in custody, and it appears the investigation cannot be completed within 24 hours, the officer shall transmit to the nearest Judicial Magistrate a copy of the entries in the case diary, and shall at the same time forward the accused to such Magistrate.
+
+Section 243
+BNSS - Bail Provisions
+The Magistrate may grant bail in bailable offences as of right. In non-bailable offences, bail may be granted at the discretion of the court, unless the person is accused of offence punishable with death or life imprisonment and there are reasonable grounds to believe he is guilty.
+
+Section 479
+BNSS - Undertrials - Bail Entitlement
+An undertrial prisoner who has served half the maximum period of imprisonment specified for the offence shall be released on bail by the Court. This does not apply to offences punishable with death penalty or life imprisonment.
+
+Section 3
+BSA - Bharatiya Sakshya Adhiniyam Overview
+The Bharatiya Sakshya Adhiniyam, 2023 (BSA) replaces the Indian Evidence Act, 1872 and came into force on 1st July 2024. It governs rules regarding admissibility and relevance of evidence in civil and criminal proceedings.
+
+Section 57
+BSA - Electronic Records as Evidence
+Electronic records including emails, WhatsApp messages, social media posts, digital photographs, and CCTV footage are admissible as evidence subject to proper certification under Section 63. Electronic records stored in cloud are also admissible.
+
+Section 63
+BSA - Admissibility of Electronic Evidence
+Electronic evidence is admissible if accompanied by a certificate signed by a responsible official of the computer system stating that the electronic records were produced by the computer in the ordinary course of its activities and were part of the records maintained regularly.
+
+Section 65
+BSA - Secondary Evidence
+Secondary evidence of documents includes certified copies, copies made from the original, counterparts of documents, oral accounts of the contents of a document given by some person who has himself seen it.
+
+Section 80
+BSA - Presumptions as to Documents
+The court shall presume the genuineness of every document purporting to be the official gazette, or the record of evidence recorded by a Magistrate, or the document which is or purports to be an official report, or any document purporting to be a certified copy of any record.
+
+Section 1
+FIR Guide - How to File an FIR
+A First Information Report (FIR) is a written document prepared by police when they receive information about a cognizable offence. Steps: (1) Visit nearest police station, (2) Narrate facts to officer in charge, (3) Officer must register FIR — refusal is punishable under BNSS, (4) Get free copy of FIR, (5) If police refuse, file complaint to Superintendent of Police or Magistrate.
+
+Section 2
+Cognizable vs Non-Cognizable Offences
+Cognizable offence: Police can arrest without warrant and investigate without Magistrate's order. Examples: murder, rape, theft above limit, robbery. Non-cognizable offence: Police need warrant to arrest and Magistrate's order to investigate. Examples: cheating below threshold, defamation, assault without grievous hurt.
+
+Section 3
+Medico Legal Case (MLC) Procedure
+When a victim of violence, accident or suspicious injury visits a hospital, the hospital must register a Medico Legal Case (MLC) and inform police. The MLC report is crucial evidence in criminal trials. Hospital cannot refuse treatment pending police formalities.
+
+Section 4
+Charge Sheet and Trial Process
+After investigation, police file a charge sheet (challan) in court. The court takes cognizance and frames charges. Prosecution examines witnesses, then defence cross-examines. Arguments are heard and judgment is pronounced. The entire process should be completed within a stipulated period.
+
+Section 5
+Witness Protection and Court Testimony
+BNSS provides for witness protection. Witnesses can depose through video conferencing. Identity of witnesses can be kept confidential by the court in sensitive cases. Threatening or intimidating witnesses is an offence under BNS Section 252.
+
+Section 6
+Anticipatory Bail
+A person who has reason to believe that he may be arrested for a non-bailable offence may apply to the High Court or the Court of Session for a direction under Section 482 BNSS that in the event of such arrest, he shall be released on bail.
+
+Section 7
+Law Enforcement Resources for Citizens
+To file a complaint: cybercrime.gov.in (online fraud, cyber crimes). Missing persons: trackthemissingchild.gov.in. RTI: rtionline.gov.in. Anti-corruption: acb portals of respective states. Police: 100 (emergency). Women helpline: 181. Anti-terrorism: NIA (nia.gov.in). NHRC: nhrc.nic.in.
+
+Section 8
+NDPS - Narcotic Drugs and Psychotropic Substances Act
+The NDPS Act, 1985 prohibits production, sale, purchase, possession of narcotic drugs and psychotropic substances. Punishment depends on quantity: small quantity (imprisonment up to 6 months), between small and commercial quantity (up to 10 years), commercial quantity (10-20 years, may extend to death).
+
+Section 9
+PMLA - Prevention of Money Laundering Act
+Money laundering — the process of concealing the proceeds of crime by passing it through complex financial transactions — is punishable under PMLA, 2002 with rigorous imprisonment of 3 to 7 years (may extend to 10 years for NDPS offences) and fine up to three times the value of proceeds.
+
+Section 10
+RTI - Right to Information Act
+Any citizen may request information from a Public Authority under RTI Act, 2005. Information must be provided within 30 days. If request relates to life or liberty, must be provided within 48 hours. File RTI online at rtionline.gov.in. Appeal to State/Central Information Commission if denied.
+
+Section 11
+Consumer Court Procedure
+A consumer complaint can be filed at: District Consumer Disputes Redressal Commission (up to 50 lakhs), State Commission (50 lakhs to 2 crores), National Commission (above 2 crores). Online complaint at edaakhil.nic.in is free for claims under 5 lakhs.
+
+Section 12
+RERA - Real Estate Regulatory Authority
+RERA, 2016 protects homebuyers from builder fraud, delays, and misrepresentation. All real estate projects above 500 sq meters must be registered with RERA. Builders must deposit 70% of collected funds in escrow account. File complaint at state RERA portal.

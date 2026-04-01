@@ -1,0 +1,32 @@
+services:
+  # Backend - FastAPI
+  - type: web
+    name: ai-law-advisor-api
+    runtime: python
+    region: singapore
+    plan: free
+    buildCommand: cd backend && chmod +x ../build.sh && bash ../build.sh
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.11.9
+
+  # Frontend - React Static Site
+  - type: web
+    name: ai-law-advisor
+    runtime: static
+    region: singapore
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/build
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: REACT_APP_API_URL
+        sync: false
